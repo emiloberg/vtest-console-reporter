@@ -1,0 +1,1 @@
+#vtest-console-reporter
