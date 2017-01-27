@@ -29,7 +29,7 @@ function report({ specs, config, chalk }) {
                 if (screenshot.masterScreenshotExists) {
                   log(`               Diff: ${
                     chalk.bold(
-                      path.join(config.temp.screenshots.diff, screenshot.screenshotFilename)
+                      path.join(config.get("temp.screenshots.diff"), screenshot.screenshotFilename)
                     )}`)
                 } else {
                   log(`               ${chalk.bold(
@@ -58,9 +58,9 @@ function report({ specs, config, chalk }) {
 
   console.log()
   console.log(chalk.blue("   Screenshots available"))
-  console.log(chalk.blue("      New: ") + config.temp.screenshots.new)
-  console.log(chalk.blue("      Diff: ") + config.temp.screenshots.diff)
-  console.log(chalk.blue("      Master: ") + config.temp.screenshots.master)
+  console.log(chalk.blue("      New: ") + config.get("temp.screenshots.new"))
+  console.log(chalk.blue("      Diff: ") + config.get("temp.screenshots.diff"))
+  console.log(chalk.blue("      Master: ") + config.get("temp.screenshots.master"))
   console.log()
 
   return specs
