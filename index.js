@@ -19,7 +19,7 @@ function report({ specs, config, chalk }) {
         ))
 
         if (!passVariant) {
-          log(`           Props variant: ${variant.id}`)
+          log(`           Props variant: ${variant.name}`)
           variant.resolutions.forEach(resolution => {
             resolution.screenshots.forEach(screenshot => {
               if (!screenshot.passTest) {
